@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Browse4Pets-Programming Hero Assignment 3 cat1</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Sora:wght@100..800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Tailwind and daisyui -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- To Modify theme tailwind -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+              secondary: "#FFF9F4",
+            },
+          },
+        },
+      };
+    </script>
+    <!-- style css -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="sora-primary">
+    <!-- Start Header -->
+
+    <header class="bg-secondary">
+      <div class="container mx-auto navbar lg:px-16">
+        <div class="navbar-start grid grid-cols-2 w-full border-b md:border-none md:flex">
+         
+          <div class="">
+            <a href="" class="flex items-center gap-2 text-xl">
+              <img src="assets/logo-header.png" alt="logo" />
+              <span class="hidden md:block">Browse4Pets</span>
+            </a>
+          </div>
+          <div class="dropdown text-end md:hidden">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h8m-8 6h16"
+                />
+              </svg>
+            </div>
+            <ul
+              tabindex="0"
+              class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+            >
+              <li><a>Find a pet</a></li>
+
+              <li><a>Breeds</a></li>
+              <li><a>Contact us</a></li>
+            </ul>
+          </div>
+        </div>
+
+
+        <div class="hidden md:flex navbar-center">
+          <ul class="menu menu-horizontal px-1">
+            <li><a>Find a pet</a></li>
+
+            <li><a>Breeds</a></li>
+            <li><a>Contact us</a></li>
+          </ul>
+        </div>
+
+        <!-- Header end show on lg -->
+        <div class="hidden lg:flex navbar-end ">
+          <button class="btn btn-ghost btn-circle">
+            <div class="indicator">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
+                />
+              </svg>
+              <span class="badge badge-xs badge-primary indicator-item"></span>
+            </div>
+          </button>
+          <button class="btn btn-ghost btn-circle">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+              />
+            </svg>
+          </button>
+
+          <a href="" class="btn-secondary">Login</a>
+          <a href="" class="btn-primary">Register</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- end Header -->
+    <!-- Start Hero -->
+    <section class="container mx-auto my-[40px] md:my-[100px]">
+      <div class="heroSection h-[748px] m-2 relative
+      bg-[url('assets/cat-big.png')] bg-no-repeat 
+      bg-bottom bg-right bg-contain 
+      "
+      >
+      <div class=" inset-0 bg-white bg-opacity-50 md:absolute"></div>
+      
+        <div class="text_container absolute top-0 left-0 z-10 w-[600px] opacity-0 translate-y-10 animate-fade-slide-up">
+          <h2 class="adlam-display-regular text-[48px] md:text-[56px]">
+            Pamper Your Pet,<br />
+            Because They Deserve
+            <br />the Bes
+          </h2>
+          <p class="text-[18px] md:text-[20px]">
+            Discover a world of treats, toys, and essentials handpicked for your
+            furry friends. Shop now and make tails wag with joy!
+          </p>
+          <button class="mt-2">
+            <a href="" class="btn-primary">Fint a pet</a>
+          </button>
+        </div>
+       
+      </div>
+    </section>
+    <!-- end Header -->
+
+    <!-- Start category -->
+    <section class="container mx-auto p-2 md:mt-[100px]">
+      <h2 class="adlam-display-regular text-[28px] md:text-[36px]">Browse By Categories</h2>
+      <div class="categories_box grid gap-4 grid-cols-2 mt-4 md:grid-cols-6">
+        <div class="card bg-[#F9DF8A] shadow-xl">
+          <figure class="p-4 mt-6 mx-auto bg-white w-[70px] h-[70px] rounded-full">
+            <img
+              src="assets/dog-cartoon.png"
+              alt="Shoes"
+              class="rounded-full"
+            />
+          </figure>
+          <div class="card-body items-center text-center">
+            <h2 class="card-title">Dog</h2>
+            <p>3 items</p>
+          </div>
+        </div>
+        <div class="card bg-[#F9DF8A] shadow-xl">
+          <figure class="p-4 mt-6 mx-auto bg-white w-[70px] h-[70px] rounded-full">
+            <img
+              src="assets/fish-cartoon.png"
+              alt="Shoes"
+              class="rounded-full"
+            />
+          </figure>
+          <div class="card-body items-center text-center">
+            <h2 class="card-title">Fish</h2>
+            <p>3 items</p>
+          </div>
+        </div>
+        <div class="card bg-[#F9DF8A] shadow-xl">
+          <figure class="p-4 mt-6 mx-auto bg-white w-[70px] h-[70px] rounded-full">
+            <img
+              src="assets/cat-cartoon.png"
+              alt="Shoes"
+              class="rounded-full"
+            />
+          </figure>
+          <div class="card-body items-center text-center">
+            <h2 class="card-title">Cat</h2>
+            <p>34 items</p>
+          </div>
+        </div>
+        <div class="card bg-[#F9DF8A] shadow-xl">
+          <figure class="p-4 mt-6 mx-auto bg-white w-[70px] h-[70px] rounded-full">
+            <img
+              src="assets/bird-cartoon.png"
+              alt="Shoes"
+              class="rounded-full"
+            />
+          </figure>
+          <div class="card-body items-center text-center">
+            <h2 class="card-title">Birds</h2>
+            <p>2 items</p>
+          </div>
+        </div>
+        <div class="card bg-[#F9DF8A] shadow-xl">
+          <figure class="p-4 mt-6 mx-auto bg-white w-[70px] h-[70px] rounded-full">
+            <img
+              src="assets/mouse-cartoon.png"
+              alt="Shoes"
+              class="rounded-full"
+            />
+          </figure>
+          <div class="card-body items-center text-center">
+            <h2 class="card-title">Mouse</h2>
+            <p>36 items</p>
+          </div>
+        </div>
+        <div class="card bg-[#F9DF8A] shadow-xl">
+          <figure class="p-4 mt-6 mx-auto bg-white w-[70px] h-[70px] rounded-full">
+            <img
+              src="assets/rabbit-cartoon.png"
+              alt="Shoes"
+              class="rounded-full"
+            />
+          </figure>
+          <div class="card-body items-center text-center">
+            <h2 class="card-title">Rabbit</h2>
+            <p>3 items</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end category -->
+    <!-- Start products -->
+    <section class="bg-secondary mt-[50px] md:mt-[100px]">
+      <div class="container mx-auto p-2 md:pt-[100px] pb-[100px]">
+        <h2 class="adlam-display-regular text-[28px] md:text-[36px]">Trending Pet Products</h2>
+
+      <div class="grid grid-cols-8 mt-[48px]">
+
+        <div class="bg-[#F9DF8A] rounded-md shadow-xl relative col-span-8 md:col-span-3 md:mr-6">
+          <div class=" p-8 ">
+            <div class=" w-[300px ">
+              <h2 class=" font-bold adlam-display-regular text-3xl mb-10">T- Shirt For Dogs</h2>
+            <p class=" text-[20px] mb-4">
+              Discover a world of treats, toys, and essentials handpicked for
+            </p>
+            <button>
+                <a href="" class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">Shop Now</a>
+            </button>
+            </div>
+            <div class=" absolute right-0 bottom-0">
+
+                <img src="assets/cute-pet-small.png" alt="">
+            </div>
+
+            
+          </div>
+        </div>
+
+        <div class="col-span-8 mt-4 md:col-span-5">
+
+            <div class="products_box grid gap-4 grid-cols-2 md:grid-cols-3">
+
+                <div class="w-[275px h-[118px] card card-side bg-base-100 border border-[#ddd] shadow-xl">
+                  <figure class="bg-secondary my-2 mx-2 p-6 ">
+                    <img
+                      src="assets/dog-cartoon.png"
+                      alt="Shoes"
+                      class="rounded-full"
+                    />
+                  </figure>
+                  <div class="card-body gap-0 p-4">
+                    <div class="rating">
+                      <input type="radio" name="rating-1" class="bg-orange-400 mask mask-star" />
+                      4.5
+                    </div>
+                    <h2 class="card-title">Dog</h2>
+                    <p class=" font-bold">$39.99</p>
+                  </div>
+                </div>
+
+                <div class="w-[275px h-[118px] card card-side bg-base-100 border border-[#ddd] shadow-xl">
+                  <figure class="bg-secondary my-2 mx-2 p-6 ">
+                    <img
+                      src="assets/dog-cartoon.png"
+                      alt="Shoes"
+                      class="rounded-full"
+                    />
+                  </figure>
+                  <div class="card-body gap-0 p-4">
+                    <div class="rating">
+                      <input type="radio" name="rating-1" class="bg-orange-400 mask mask-star" />
+                      4.5
+                    </div>
+                    <h2 class="card-title">Dog</h2>
+                    <p class=" font-bold">$39.99</p>
+                  </div>
+                </div>
+
+                <div class="w-[275px h-[118px] card card-side bg-base-100 border border-[#ddd] shadow-xl">
+                  <figure class="bg-secondary my-2 mx-2 p-6 ">
+                    <img
+                      src="assets/dog-cartoon.png"
+                      alt="Shoes"
+                      class="rounded-full"
+                    />
+                  </figure>
+                  <div class="card-body gap-0 p-4">
+                    <div class="rating">
+                      <input type="radio" name="rating-1" class="bg-orange-400 mask mask-star" />
+                      4.5
+                    </div>
+                    <h2 class="card-title">Dog</h2>
+                    <p class=" font-bold">$39.99</p>
+                  </div>
+                </div>
+
+                <div class="w-[275px h-[118px] card card-side bg-base-100 border border-[#ddd] shadow-xl">
+                  <figure class="bg-secondary my-2 mx-2 p-6 ">
+                    <img
+                      src="assets/cat-cartoon.png"
+                      alt="Shoes"
+                      class="rounded-full"
+                    />
+                  </figure>
+                  <div class="card-body gap-0 p-4">
+                    <div class="rating">
+                      <input type="radio" name="rating-1" class="bg-orange-400 mask mask-star" />
+                      4.5
+                    </div>
+                    <h2 class="card-title">Cat</h2>
+                    <p class=" font-bold">$98.99</p>
+                  </div>
+                </div>
+
+                <div class="w-[275px h-[118px] card card-side bg-base-100 border border-[#ddd] shadow-xl">
+                  <figure class="bg-secondary my-2 mx-2 p-6 ">
+                    <img
+                      src="assets/bird-cartoon.png"
+                      alt="Shoes"
+                      class="rounded-full"
+                    />
+                  </figure>
+                  <div class="card-body gap-0 p-4">
+                    <div class="rating">
+                      <input type="radio" name="rating-1" class="bg-orange-400 mask mask-star" />
+                      4.5
+                    </div>
+                    <h2 class="card-title">Bird</h2>
+                    <p class=" font-bold">$30.99</p>
+                  </div>
+                </div>
+
+                <div class="w-[275px h-[118px] card card-side bg-base-100 border border-[#ddd] shadow-xl">
+                  <figure class="bg-secondary my-2 mx-2 p-6 ">
+                    <img
+                      src="assets/mouse-cartoon.png"
+                      alt="Shoes"
+                      class="rounded-full"
+                    />
+                  </figure>
+                  <div class="card-body gap-0 p-4">
+                    <div class="rating">
+                      <input type="radio" name="rating-1" class="bg-orange-400 mask mask-star" />
+                      4.5
+                    </div>
+                    <h2 class="card-title">Mouse</h2>
+                    <p class=" font-bold">$30.99</p>
+                  </div>
+                </div>
+
+                <div class="w-[275px h-[118px] card card-side bg-base-100 border border-[#ddd] shadow-xl">
+                  <figure class="bg-secondary my-2 mx-2 p-6 ">
+                    <img
+                      src="assets/rabbit-cartoon.png"
+                      alt="Shoes"
+                      class="rounded-full"
+                    />
+                  </figure>
+                  <div class="card-body gap-0 p-4">
+                    <div class="rating">
+                      <input type="radio" name="rating-1" class="bg-orange-400 mask mask-star" />
+                      4.5
+                    </div>
+                    <h2 class="card-title">Rabbit</h2>
+                    <p class=" font-bold">$69.99</p>
+                  </div>
+                </div>
+
+                <div class="w-[275px h-[118px] card card-side bg-base-100 border border-[#ddd] shadow-xl">
+                  <figure class="bg-secondary my-2 mx-2 p-6 ">
+                    <img
+                      src="assets/dog-cartoon.png"
+                      alt="Shoes"
+                      class="rounded-full"
+                    />
+                  </figure>
+                  <div class="card-body gap-0 p-4">
+                    <div class="rating">
+                      <input type="radio" name="rating-1" class="bg-orange-400 mask mask-star" />
+                      4.5
+                    </div>
+                    <h2 class="card-title">Dog</h2>
+                    <p class=" font-bold">$39.99</p>
+                  </div>
+                </div>
+
+                <div class="w-[275px h-[118px] card card-side bg-base-100 border border-[#ddd] shadow-xl">
+                  <figure class="bg-secondary my-2 mx-2 p-6 ">
+                    <img
+                      src="assets/fish-cartoon.png"
+                      alt="Shoes"
+                      class="rounded-full"
+                    />
+                  </figure>
+                  <div class="card-body gap-0 p-4">
+                    <div class="rating">
+                      <input type="radio" name="rating-1" class="bg-orange-400 mask mask-star" />
+                      4.5
+                    </div>
+                    <h2 class="card-title">Fish</h2>
+                    <p class=" font-bold">$29.99</p>
+                  </div>
+                </div>
+   
+          
+
+
+              </div>
+        </div>
+      </div>
+      </div>
+
+    </section>
+    <!-- end products -->
+     <!-- start carousel -->
+      <section class=" container mx-auto px-4 md:mt-[100px]">
+        <h2 class="adlam-display-regular text-[28px] md:text-[36px]">Trending Pets</h2>
+
+        <div class="carousel w-full mt-4">
+          <div id="slide1" class="carousel-item relative w-full">
+            <img
+              src="assets/slider1.jpg"
+              class="w-full" />
+            <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+              <a href="#slide4" class="btn btn-circle">❮</a>
+              <a href="#slide2" class="btn btn-circle">❯</a>
+            </div>
+          </div>
+          <div id="slide2" class="carousel-item relative w-full">
+            <img
+            src="assets/slider2.jpg"
+                          class="w-full" />
+            <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+              <a href="#slide1" class="btn btn-circle">❮</a>
+              <a href="#slide3" class="btn btn-circle">❯</a>
+            </div>
+          </div>
+          <div id="slide3" class="carousel-item relative w-full">
+            <img
+            src="assets/slider3.jpg"              
+            class="w-full" />
+            <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+              <a href="#slide2" class="btn btn-circle">❮</a>
+              <a href="#slide4" class="btn btn-circle">❯</a>
+            </div>
+          </div>
+          <div id="slide4" class="carousel-item relative w-full">
+            <img
+            src="assets/slider4.jpg"              
+            class="w-full" />
+            <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+              <a href="#slide3" class="btn btn-circle">❮</a>
+              <a href="#slide1" class="btn btn-circle">❯</a>
+            </div>
+          </div>
+          <div id="slide5" class="carousel-item relative w-full">
+            <img
+            src="assets/slider5.jpg"              
+            class="w-full" />
+            <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+              <a href="#slide4" class="btn btn-circle">❮</a>
+              <a href="#slide1" class="btn btn-circle">❯</a>
+            </div>
+          </div>
+        </div>
+      </section>
+     <!-- end carousel -->
+    <!-- Start price -->
+    <section class="container mx-auto mt-[50px] md:mt-[100px]  mb-[400px] py[100px]">
+        <div class=" p-2">
+          <h2 class="adlam-display-regular text-[28px] md:text-[36px]">Everyday low Price</h2>
+  
+        <div class="grid grid-cols-5 gap-4 mt-[48px]">
+
+          <div class=" bg-gradient-to-tr from-[#F8CCFB] to-[#ACD2FD] shadow-xl 
+          col-span-5 h-[430px]  md:col-span-3 md:mr-6 md:h-[480px]">
+            
+            <div class=" flex">
+
+                <div class="p-12 md:p-20">
+                    <span class=" text-[20px] hidden md:block">Under Price</span>
+                  <h2 class=" font-bold adlam-display-regular mb-2 text-2xl md:text-3xl md:mb-10">Pet Grooming Mitt</h2>
+                  <p class="hidden md:block [24px] text-white mb-4 adlam-display-regular">
+                    (Easy Hair Removal)
+                  </p>
+                  <span class=" font-bold text-2xl text-white md:text-black">$7.99</span>
+                  
+                </div>
+                <div class="">
+      
+                    <img src="assets/cute-dog-mid.png" alt="">
+                </div>
+            </div>
+ 
+         
+        </div>
+
+        
+        <div class="bg-gradient-to-tr from-[#FFF9F4] to-[#F9DF8A] shadow-xl 
+         col-span-5 h-[430px]  relative md:col-span-2 md:mr-6  md:h-[480px]">
+            <div class=" p-10">
+              <h2 class=" font-bold adlam-display-regular text-3xl mb-10">T- Shirt For Dogs</h2>
+              <span class=" font-bold text-2xl text-[#FFDC26]">$7.99</span>
+              
+
+              
+            </div>
+            <div class=" absolute right-0 bottom-0">
+  
+                <img src="assets/cute-pet-mid.png" alt="">
+            </div>
+
+         
+        </div>
+
+        
+        </div>
+  
+      </section>
+    <!-- end price -->
+    <!-- end price -->
+
+    <!-- start footer -->
+     <footer class="bg-[#FFDC26] bg-opacity-50 p-8">
+
+
+        <div class="container mx-auto h-[790px] md:h-[654px] relative">
+        <!-- start subscribe -->
+        <div class=" container mx-auto absolute -top-[40%] md:-top-[50%]">
+          <div class="subscribe_container bg-secondary flex flex-col md:flex-row">
+            <div class="mx-auto md:p-12">
+              <img src="assets/cute-pet-mid.png" alt="">
+            </div>
+            <div class=" flex-1 text-center md:p-[100px] md:text-left ">
+              <h2 class=" font-bold text-[18px] md:text-2xl my-2 md:my-4">Get Awsome News!</h2>
+              <p>Exclusive training tips, ticks, product deals and more.</p>
+              <!-- only sm -->
+              <span class=" w-full flex justify-center md:hidden">
+                <input
+                type="text"
+                placeholder="Enter email"
+                class="input block text-center p-4 my-8 w-full max-w-md"
+                  />
+              </span>
+
+              <input
+                type="text"
+                placeholder="Enter email"
+                class="input hidden md:block text-center p-4 my-8 w-full max-w-md"
+                  />
+                  <button>
+                    <a href="" class=" mb-2 btn-primary">Subscribe</a>
+                  </button>
+            </div>
+          </div>
+        </div>
+      <!-- end subcribe -->
+
+
+          <div class=" grid grid-cols-1 md:grid-cols-3 absolute bottom-[100px] md:bottom-[140px]">
+            <div>
+              <a href="" class="flex items-center gap-2 text-xl">
+                <img src="assets/logo-footer.png" alt="logo" />
+                <span>Browse4Pets</span>
+              </a>
+                <p class=" my-4">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem architecto eos quae quidem eius deserunt voluptas saepe maxime illum tempora! Distinctio quis obcaecati id repudiandae doloribus provident alias veritatis dolorem.
+                </p>
+            </div>
+  
+            <div class="flex flex-col space-y-2 md:px-24 ">
+              <div><a href="">Find a pet</a></div>
+              <div><a href="">Breads</a></div>
+              <div><a href="">Contact Us</a></div>
+            </div>
+            <!-- visible from -->
+            <div class="hidden md:block relative">
+              
+              
+              <div class=" absolute bottom-0 right-0">
+                <h6 class="footer-title">Follow Us</h6>
+                <ul class=" flex space-x-6">
+                  <li class=""><a href="">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      class="fill-current">
+                      <path
+                        d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path>
+                    </svg>
+              </a>
+                  </a></li>
+                  <li><a href="">
+                    <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    class="fill-current">
+                    <path
+                      d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path>
+                  </svg>
+                  </a></li>
+                  <li><a href="">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      class="fill-current">
+                      <path
+                        d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path>
+                    </svg>
+                  </a></li>
+  
+                </ul>
+              </div>
+              
+            </div>
+
+            <!-- only for sm -->
+              
+              
+              <div class="mt-6 md:hidden">
+                <h6 class="footer-title">Follow Us</h6>
+                <ul class=" flex space-x-6">
+                  <li class=""><a href="">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      class="fill-current">
+                      <path
+                        d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path>
+                    </svg>
+              </a>
+                  </a></li>
+                  <li><a href="">
+                    <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    class="fill-current">
+                    <path
+                      d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path>
+                  </svg>
+                  </a></li>
+                  <li><a href="">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      class="fill-current">
+                      <path
+                        d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path>
+                    </svg>
+                  </a></li>
+  
+                </ul>
+              </div>
+              
+            
+     
+              
+  
+          
+  
+          </div>
+        </div>
+     </footer>
+    <!-- end footer -->
+  </body>
+</html>
